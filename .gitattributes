@@ -1,0 +1,15 @@
+# 统一换行：仓库内按 LF 存放，检出到 Windows 工作区时再转 CRLF
+* text=auto
+
+*.cs   text diff=csharp
+*.xaml text
+*.csproj text
+*.sln  text eol=crlf
+*.ps1  text eol=crlf
+*.md   text
+*.json text
+*.manifest text
+
+# 二进制不要做文本转换
+*.png binary
+*.exe binary

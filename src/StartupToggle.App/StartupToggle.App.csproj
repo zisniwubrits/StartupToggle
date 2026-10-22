@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>StartupToggle</AssemblyName>
+    <RootNamespace>StartupToggle.App</RootNamespace>
+    <Product>开机启动项管理</Product>
+    <AssemblyTitle>开机启动项管理</AssemblyTitle>
+    <Description>开关 Windows 11 开机启动项，只写 StartupApproved 状态，可一键恢复</Description>
+    <Version>1.0.0</Version>
+    <Authors>zbrg</Authors>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <ApplicationManifest Condition="'$(NoElevation)' == 'true'">app.asinvoker.manifest</ApplicationManifest>
+    <ApplicationManifest Condition="'$(NoElevation)' != 'true'">app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StartupToggle.Core\StartupToggle.Core.csproj" />
+  </ItemGroup>
+
+</Project>

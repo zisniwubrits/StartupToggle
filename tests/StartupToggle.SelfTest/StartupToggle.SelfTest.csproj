@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>StartupToggle.SelfTest</AssemblyName>
+    <RootNamespace>StartupToggle.SelfTest</RootNamespace>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\StartupToggle.Core\StartupToggle.Core.csproj" />
+    <ProjectReference Include="..\..\src\StartupToggle.App\StartupToggle.App.csproj" />
+  </ItemGroup>
+
+</Project>
